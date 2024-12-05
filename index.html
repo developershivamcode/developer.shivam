@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Notes Upload</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fc;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .content {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+    h2 {
+      color: #333;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin: 10px 0;
+      font-weight: bold;
+    }
+    input[type="text"], input[type="file"] {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    input[type="submit"] {
+      background-color: #5cb85c;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    input[type="submit"]:hover {
+      background-color: #4cae4c;
+    }
+    .lorem-text {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to My Notes Upload Website</h1>
+    <p>Upload your notes and share them with others!</p>
+  </header>
+
+  <div class="container">
+    <!-- Notes Upload Section -->
+    <div class="content">
+      <h2>Upload Your Notes</h2>
+      <form id="uploadForm">
+        <label for="noteTitle">Note Title</label>
+        <input type="text" id="noteTitle" name="noteTitle" required placeholder="Enter your note title">
+
+        <label for="noteFile">Upload Note (PDF,PNG,JPG, DOCX, etc.)</label>
+        <input type="file" id="noteFile" name="noteFile" accept=".pdf, .docx, .txt" required>
+
+        <input type="submit" value="Upload Note">
+      </form>
+    </div>
+
+    <!-- Lorem Ipsum Text Section -->
+    <div class="content">
+      <h2>Lorem Ipsum Example</h2>
+      <p class="lorem-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id dui sit amet nunc malesuada eleifend. Donec fringilla eu dui sit amet tempus. Suspendisse potenti. Integer efficitur augue vitae elit blandit, id interdum elit vulputate. Proin fermentum, libero id fermentum faucibus, nisl dui ultricies erat, nec laoreet velit orci at velit. Nam nec nulla tempor, lobortis sem id, auctor purus. Integer ut orci ut ipsum sollicitudin tempus eget non ipsum. Nullam interdum elit vel auctor posuere. Sed venenatis augue a orci cursus, eget volutpat orci eleifend. Donec sodales, nunc ac fermentum malesuada, nisi felis sodales ante, ac congue lorem nunc ut tortor. Sed sit amet eros non odio eleifend malesuada a sed risus.
+        <br><br>
+        Curabitur aliquam ligula sed bibendum efficitur. Sed eget feugiat purus, sit amet tempor ipsum. Integer vitae mi ac metus faucibus vulputate. Cras laoreet, lorem eget tempor laoreet, neque sapien convallis nisl, non varius elit eros sit amet leo. Ut et lorem felis. Nulla eu lectus eu tortor sollicitudin placerat a id elit. Phasellus maximus ligula sit amet mi pharetra, nec interdum urna ultricies. Aenean volutpat libero a mi vehicula, nec rhoncus est suscipit. Sed sed purus est.
+        <br><br>
+        Fusce varius, eros et consectetur tempor, augue est faucibus ante, vel venenatis dui ligula non ante. Donec et quam id magna gravida tincidunt. Etiam gravida sollicitudin turpis, in auctor mi suscipit ut. Aliquam erat volutpat. Morbi pellentesque gravida augue non hendrerit. Quisque ut libero a elit sodales fermentum. In hac habitasse platea dictumst. Aliquam ut enim sed erat bibendum faucibus ac id libero. Nam vulputate magna ut suscipit facilisis. Nam bibendum suscipit augue. Fusce consequat lacinia ipsum, a sodales purus gravida nec.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript for handling form submission
+    document.getElementById('uploadForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert("Your note has been uploaded successfully!");
+      document.getElementById('uploadForm').reset();
+    });
+  </script>
+  
+</body>
+</html>
